@@ -1,0 +1,6 @@
+{
+  "installCommand": "echo Skipping root install",
+  "buildCommand": "cd spotify-clone && npm ci && npm run build",
+  "outputDirectory": "spotify-clone/dist",
+  "framework": "vite"
+}

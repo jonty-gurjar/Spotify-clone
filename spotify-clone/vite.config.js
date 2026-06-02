@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
-export default defineConfig(({ command }) => ({
-  base: process.env.VITE_BASE_PATH || "/Spotify-clone",
+export default defineConfig(() => ({
+  base: globalThis.process?.env.VERCEL ? '/' : (globalThis.process?.env.VITE_BASE_PATH || '/Spotify-clone/'),
   plugins: [react(), tailwindcss()],
 }))
